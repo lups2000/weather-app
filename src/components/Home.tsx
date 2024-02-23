@@ -1,16 +1,7 @@
-import React, { useState } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  InputGroup,
-  FormControl,
-} from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { LocationSelection } from "./LocationSelection";
 
 export function Home() {
-  const [selectedCountry, setSelectedCountry] = useState("");
-
   return (
     <Container style={{ marginTop: 200 }}>
       <Row className="justify-content-center">
@@ -23,14 +14,7 @@ export function Home() {
               </Card.Subtitle>
               <hr />
               <div style={{ padding: 10 }}>
-                <h5>Country</h5>
-                <InputGroup className="mb-3">
-                  <FormControl
-                    placeholder="Select a country"
-                    value={selectedCountry}
-                    onChange={(e) => setSelectedCountry(e.target.value)}
-                  />
-                </InputGroup>
+                <LocationSelection />
               </div>
             </Card.Body>
           </Card>
