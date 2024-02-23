@@ -1,5 +1,5 @@
 import { LocationLeftPart } from "./LocationLeftPart";
-import { LocationRightPart } from "./LocationRightPart";
+import { LocationRightPart } from "../Overview/LocationRightPart";
 
 export function LocationDetails() {
   return (
