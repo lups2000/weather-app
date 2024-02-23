@@ -1,5 +1,5 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { LocationSelection } from "./LocationSelection";
+import { LocationSelection } from "./Location/LocationSelection";
 
 export function Home() {
   return (
@@ -14,7 +14,7 @@ export function Home() {
               </Card.Subtitle>
               <hr />
               <div style={{ padding: 10 }}>
-                <LocationSelection />
+                <LocationSelection title="country" />
               </div>
             </Card.Body>
           </Card>

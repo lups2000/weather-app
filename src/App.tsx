@@ -1,10 +1,12 @@
 import "./App.css";
 import { Home } from "./components/Home";
+import { LocationDetails } from "./components/Location/LocationDetails";
 
 function App() {
   return (
     <div>
-      <Home></Home>
+      {/*<Home />*/}
+      <LocationDetails />
     </div>
   );
 }
