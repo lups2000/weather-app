@@ -1,6 +1,10 @@
 import { LocationSelection } from "./LocationSelection";
 
 export function LocationLeftPart() {
+  const handleChangeInput = (value: string) => {
+    //console.log(value);
+  };
+
   return (
     <div
       style={{
@@ -13,8 +17,7 @@ export function LocationLeftPart() {
       <div>
         <h2>Munich</h2>
         <h6>Latitute/Longitude</h6>
-        <LocationSelection title="Country" />
-        <LocationSelection title="City" />
+        <LocationSelection title="City" onChangeInput={handleChangeInput} />
       </div>
       <hr />
       <div

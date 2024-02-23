@@ -1,7 +1,15 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { LocationSelection } from "./Location/LocationSelection";
+import { useNavigate } from "react-router-dom";
 
 export function Home() {
+
+  const navigate = useNavigate();
+
+  const handleChangeInput = (value: string) => {
+    navigate(`/location/${value}`);
+  };
+
   return (
     <Container style={{ marginTop: 200 }}>
       <Row className="justify-content-center">
@@ -14,7 +22,7 @@ export function Home() {
               </Card.Subtitle>
               <hr />
               <div style={{ padding: 10 }}>
-                <LocationSelection title="country" />
+                <LocationSelection title="country" onChangeInput={handleChangeInput}/>
               </div>
             </Card.Body>
           </Card>
